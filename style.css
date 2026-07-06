@@ -535,3 +535,54 @@ tr:hover{
     margin-top:10px;
 
 }
+
+.task-form{
+
+    display:grid;
+
+    grid-template-columns:2fr 2fr 1.5fr 1.5fr auto;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.task-form input,
+.task-form select{
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1E293B;
+
+    color:white;
+
+    outline:none;
+
+}
+
+.task-form button{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.task-form button:hover{
+
+    background:#3B82F6;
+
+}
