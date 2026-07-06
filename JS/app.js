@@ -11,5 +11,6 @@ window.onload = () => {
     });
 
     loadPage("dashboard");
-
+    
+    refreshUI();    
 };
