@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ExamHQ</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>ExamHQ</h2>
+
+            <p>Examination Management System</p>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li class="nav-item active" data-page="dashboard">
+
+                    Dashboard
+
+                </li>
+
+                <li class="nav-item" data-page="teachers">
+
+                    Teachers
+
+                </li>
+
+                <li class="nav-item" data-page="tasks">
+
+                    Tasks
+
+                </li>
+
+                <li class="nav-item" data-page="departments">
+
+                    Departments
+
+                </li>
+
+                <li class="nav-item" data-page="reports">
+
+                    Reports
+
+                </li>
+
+                <li class="nav-item" data-page="analytics">
+
+                    Analytics
+
+                </li>
+
+                <li class="nav-item" data-page="settings">
+
+                    Settings
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="pageTitle">
+
+                    Dashboard
+
+                </h1>
+
+                <p>
+
+                    Examination Department Automation Dashboard
+
+                </p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <input
+                    type="text"
+                    id="searchBox"
+                    placeholder="Search..."
+                >
+
+                <button id="notificationBtn">
+
+                    🔔
+
+                </button>
+
+                <button id="profileBtn">
+
+                    Admin
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="card">
+
+                <h3>Total Tasks</h3>
+
+                <h2 id="totalTasks">0</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Completed</h3>
+
+                <h2 id="completedTasks">0</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Pending</h3>
+
+                <h2 id="pendingTasks">0</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Overdue</h3>
+
+                <h2 id="overdueTasks">0</h2>
+
+            </div>
+
+        </section>
+
+        <!-- Router loads page content here -->
+
+        <section id="main">
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- Scripts -->
+
+<script src="js/data.js"></script>
+
+<script src="js/utils.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/teachers.js"></script>
+
+<script src="js/tasks.js"></script>
+
+<script src="js/reports.js"></script>
+
+<script src="js/analytics.js"></script>
+
+<script src="js/settings.js"></script>
+
+<script src="js/router.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
