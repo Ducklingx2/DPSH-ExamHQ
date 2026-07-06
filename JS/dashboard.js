@@ -6,7 +6,7 @@ function Dashboard(main) {
 
             <div class="welcome-card">
 
-                <h2>Welcome back, Administrator 👋</h2>
+                <h2>Welcome back.</h2>
 
                 <p>
                     Manage examination tasks, monitor teacher progress,
