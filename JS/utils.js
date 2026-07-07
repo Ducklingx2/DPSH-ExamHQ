@@ -42,3 +42,38 @@ function isOverdue(task) {
     return task.deadline < today();
 
 }
+
+function saveData() {
+
+    localStorage.setItem("teachers", JSON.stringify(teachers));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+}
+
+// =========================
+// Load Data
+// =========================
+
+function loadData() {
+
+    const savedTeachers = JSON.parse(localStorage.getItem("teachers"));
+
+    if (savedTeachers) {
+
+        teachers.length = 0;
+
+        teachers.push(...savedTeachers);
+
+    }
+
+    const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+
+    if (savedTasks) {
+
+        tasks.length = 0;
+
+        tasks.push(...savedTasks);
+
+    }
+
+}
