@@ -39,16 +39,11 @@ const taskTemplates = [
 
     {
         id: 5,
-        name: "Hall Ticket Verification"
-    },
-
-    {
-        id: 6,
         name: "Invigilation Duty"
     },
 
     {
-        id: 7,
+        id: 6,
         name: "Marks Submission"
     }
 
