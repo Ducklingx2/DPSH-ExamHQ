@@ -151,11 +151,33 @@ function renderTasks() {
                 <td>${task.title}</td>
 
                 <td>${task.deadline}</td>
+                <br><br>
+
+        <button onclick="submitTask(${task.id})">
+            Submit
+        </button>
 
             </tr>
 
         `;
 
     });
+
+}
+
+function submitTask(taskId) {
+
+    const task = tasks.find(t => t.id === taskId);
+
+    if (!task) return;
+
+    task.status = "Completed";
+    task.completedAt = new Date().toISOString();
+
+    saveData();
+
+    renderTasks();
+
+    updateDashboardStats();
 
 }
