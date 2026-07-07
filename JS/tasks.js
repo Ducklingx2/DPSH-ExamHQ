@@ -146,19 +146,25 @@ function renderTasks() {
 
             <tr>
 
-                <td>${teacher ? teacher.name : "Unknown"}</td>
+    <td>${teacher ? teacher.name : "Unknown"}</td>
 
-                <td>${task.title}</td>
+    <td>
+        ${task.title}
 
-                <td>${task.deadline}</td>
-                <br><br>
+        ${task.status === "Completed"
+            ? ""
+            : `<br><br>
+               <button onclick="submitTask(${task.id})">
+                   Submit
+               </button>`
+        }
+    </td>
 
-        <button onclick="submitTask(${task.id})">
-            Submit
-        </button>
+    <td>${task.deadline}</td>
 
-            </tr>
+    <td>${getTaskStatus(task)}</td>
 
+</tr>
         `;
 
     });
