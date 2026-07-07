@@ -22,11 +22,7 @@ function Tasks(main) {
 
         <div class="task-form">
 
-            <input
-                id="taskTitle"
-                type="text"
-                placeholder="Task Title"
-            >
+        <select id="taskTemplate"></select>
 
             <select id="taskTeacher">
 
