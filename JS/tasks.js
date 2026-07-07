@@ -122,6 +122,8 @@ function addTask() {
 
     });
 
+    saveData();
+    
     renderTasks();
 
     updateDashboardStats();
