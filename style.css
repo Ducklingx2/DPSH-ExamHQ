@@ -218,13 +218,17 @@ body{
 
 }
 
-table{
+table {
 
-    width:100%;
+    width: 100%;
 
-    border-collapse:collapse;
+    border-collapse: separate;
 
-    margin-top:25px;
+    border-spacing: 0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
 
 }
 
