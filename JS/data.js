@@ -39,11 +39,6 @@ const taskTemplates = [
 
     {
         id: 5,
-        name: "Invigilation Duty"
-    },
-
-    {
-        id: 6,
         name: "Marks Submission"
     }
 
