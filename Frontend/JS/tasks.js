@@ -68,7 +68,7 @@ function Tasks(main) {
 
     loadTaskTemplates();
     
-    renderTasks();
+    loadTasks();
 
 }
 
@@ -90,7 +90,7 @@ function loadTaskTemplates() {
 
 }
 
-function addTask() {
+async function addTask() {
 
     const templateId =
         Number(document.getElementById("taskTemplate").value);
@@ -106,9 +106,17 @@ function addTask() {
     const deadline =
         document.getElementById("taskDeadline").value;
 
-    tasks.push({
+    await fetch("/api/tasks", {
 
-        id: generateId(),
+    method: "POST",
+
+    headers: {
+
+        "Content-Type": "application/json"
+
+    },
+
+    body: JSON.stringify({
 
         teacherId,
 
@@ -118,15 +126,27 @@ function addTask() {
 
         status: "Pending"
 
-    });
+    })
 
-    saveData();
+});
+
+await loadTasks();
+
+updateDashboardStats();
+
+}
+
+async function loadTasks() {
+
+    const response = await fetch("/api/tasks");
+
+    tasks.length = 0;
+
+    const data = await response.json();
+
+    tasks.push(...data);
 
     renderTasks();
-
-    updateDashboardStats();
-
-    document.getElementById("taskDeadline").value = "";
 
 }
 

@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"examhq/Handlers"
+	"examhq/handlers"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 
 	if r.Method == http.MethodGet {
 
-		Handlers.GetTasks(w, r)
+		handlers.GetTasks(w, r)
 
 		return
 
@@ -23,7 +23,7 @@ func main() {
 
 	if r.Method == http.MethodPost {
 
-		Handlers.CreateTask(w, r)
+		handlers.CreateTask(w, r)
 
 		return
 
@@ -32,20 +32,6 @@ func main() {
 	http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 
 })
-		switch r.Method {
-
-		case http.MethodGet:
-			handlers.GetTasks(w, r)
-
-		case http.MethodPost:
-			handlers.CreateTask(w, r)
-
-		default:
-			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-
-		}
-
-	})
 
 	log.Println("Server running on http://localhost:8080")
 
