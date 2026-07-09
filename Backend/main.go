@@ -32,6 +32,20 @@ func main() {
 	http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 
 })
+		switch r.Method {
+
+		case http.MethodGet:
+			handlers.GetTasks(w, r)
+
+		case http.MethodPost:
+			handlers.CreateTask(w, r)
+
+		default:
+			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+
+		}
+
+	})
 
 	log.Println("Server running on http://localhost:8080")
 

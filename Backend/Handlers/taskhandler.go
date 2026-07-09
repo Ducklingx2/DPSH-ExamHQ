@@ -1,4 +1,4 @@
-package Handlers
+package handlers
 
 import (
 	"encoding/json"
@@ -32,6 +32,10 @@ func CreateTask(w http.ResponseWriter, r *http.Request) {
 	}
 
 	task.ID = len(Tasks) + 1
+
+	if task.Status == "" {
+		task.Status = "Pending"
+	}
 
 	Tasks = append(Tasks, task)
 
