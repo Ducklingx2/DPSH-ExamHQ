@@ -24,10 +24,21 @@ function Teachers(main) {
         .getElementById("addTeacherBtn")
         .addEventListener("click", addTeacher);
 
-    renderTeachers();
+    loadTeachers();
+
 }
 
-function addTeacher() {
+async function loadTeachers() {
+
+    const response = await fetch("/api/teachers");
+
+    teachers = await response.json();
+
+    renderTeachers();
+
+}
+
+async function addTeacher() {
 
     const name = document.getElementById("teacherName").value.trim();
     const email = document.getElementById("teacherEmail").value.trim();
@@ -38,27 +49,38 @@ function addTeacher() {
         return;
     }
 
-    teachers.push({
-        id: generateId(),
-        name,
-        email,
-        subject
-    });
-    saveData();
+    await fetch("/api/teachers", {
 
-    renderTeachers();
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            name,
+            email,
+            subject
+        })
+
+    });
 
     document.getElementById("teacherName").value = "";
     document.getElementById("teacherEmail").value = "";
     document.getElementById("teacherSubject").value = "";
+
+    loadTeachers();
+
 }
 
 function renderTeachers() {
 
     const list = document.getElementById("teacherList");
 
-    list.innerHTML = "";
+    if (!list) return;
 
+    list.innerHTML = "";
+   
     teachers.forEach(teacher => {
 
         list.innerHTML += `

@@ -27,18 +27,29 @@ func Connect() {
 }
 
 func createTables() {
+
 	query := `
+	CREATE TABLE IF NOT EXISTS teachers (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		name TEXT NOT NULL,
+		email TEXT,
+		subject TEXT
+	);
+
 	CREATE TABLE IF NOT EXISTS tasks (
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		teacherId INTEGER,
-		title TEXT,
+		title TEXT NOT NULL,
 		deadline TEXT,
-		status TEXT
+		status TEXT,
+		FOREIGN KEY (teacherId) REFERENCES teachers(id)
 	);
 	`
 
 	_, err := DB.Exec(query)
+
 	if err != nil {
 		log.Fatal(err)
 	}
+
 }

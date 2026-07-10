@@ -1,4 +1,4 @@
-function Dashboard(main) {
+async function Dashboard(main) {
 
     main.innerHTML = `
 
@@ -104,6 +104,41 @@ function Dashboard(main) {
 
     `;
 
-    refreshUI();
+  }
+ 
+function updateDashboardStats() {
+
+    const total = tasks.length;
+
+    const completed = tasks.filter(
+        t => t.status === "Completed"
+    ).length;
+
+    const overdue = tasks.filter(
+        t => getTaskStatus(t) === "🔴 Overdue"
+    ).length;
+
+    const pending = tasks.filter(
+        t => getTaskStatus(t) === "🟡 Pending"
+    ).length;
+
+    document.getElementById("totalTasks").textContent = total;
+
+    document.getElementById("completedTasks").textContent = completed;
+
+    document.getElementById("pendingTasks").textContent = pending;
+
+    document.getElementById("overdueTasks").textContent = overdue;
 
 }
+
+function refreshUI() {
+
+    renderTasks();
+
+    renderTeachers();
+
+    updateDashboardStats();
+
+}
+

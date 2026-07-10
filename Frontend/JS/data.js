@@ -1,5 +1,5 @@
-const teachers = [];
-const tasks = [];
+let teachers = [];
+let tasks = [];
 const subjects = [
 
     "Science",
