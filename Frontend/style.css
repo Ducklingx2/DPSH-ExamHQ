@@ -11,11 +11,14 @@
     --bg:#0F172A;
     --sidebar:#111827;
     --panel:#1E293B;
+    --panel-bg: var(--panel);
+    --backdrop:none;
 
     /* Text */
 
     --text:#F8FAFC;
     --text-muted:#94A3B8;
+    --button-text:#ffffff;
 
     /* Borders */
 
@@ -58,9 +61,13 @@ body{
 .panel,
 .teacher-card,
 .welcome-card,
-#main{
+#main {
 
-    box-shadow:var(--panel-shadow);
+    background: var(--panel-bg);
+    border: var(--border-style);
+    box-shadow: var(--panel-shadow);
+    backdrop-filter: var(--backdrop);
+    -webkit-backdrop-filter: var(--backdrop);
 
 }
 
@@ -110,17 +117,19 @@ body{
 
 }
 
-.nav-item{
+.nav-item {
 
-    color:var(--text-muted);
+    padding: 18px 30px;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-muted);
+    font-weight: 500;
 
 }
 
 .nav-item:hover{
 
-    background:var(--panel);
-
-    color:var(--text);
+    background:var(--panel-bg);
 
 }
 
@@ -128,14 +137,14 @@ body{
 
     background:var(--primary);
 
-    color:var(--text);
+    color:var(--button-text);
 
 }
 
 .active:hover{
 
     background:var(--primary-hover);
-
+ 
 }
 
 .content{
@@ -192,7 +201,7 @@ body{
 
     border-radius:10px;
 
-    background: var(--panel);
+    background: var(--panel-bg);
 
     color:var(--text);
 
@@ -214,7 +223,7 @@ body{
 
 .card{
 
-    background: var(--panel);
+    background: var(--panel-bg);
 
     border-radius:var(--radius);
 
@@ -278,7 +287,7 @@ th{
 
     background: var(--primary);
 
-    color:var(--text);
+    color:var(--button-text);
 
     text-align:left;
 
@@ -296,7 +305,7 @@ td{
 
 tr:hover{
 
-    background: var(--panel);
+    background: var(--panel-bg);
 
 }
 
@@ -320,7 +329,7 @@ tr:hover{
 
     border-radius:10px;
 
-    background: var(--panel);
+    background: var(--panel-bg);
 
     color:var(--text);
 
@@ -334,7 +343,7 @@ tr:hover{
 
     background: var(--primary);
 
-    color:var(--text);
+    color:var(--button-text);
 
     border-radius:10px;
 
@@ -352,7 +361,7 @@ tr:hover{
 
 .teacher-card{
 
-    background: var(--panel);
+    background: var(--panel-bg);
 
     padding:20px;
 
@@ -449,7 +458,7 @@ tr:hover{
 
 .welcome-card{
 
-    background: var(--panel);
+    background: var(--panel-bg);
     padding:30px;
     border-radius:var(--radius);
 
@@ -477,7 +486,7 @@ tr:hover{
 
 .panel{
 
-    background: var(--panel);
+    background: var(--panel-bg);
     padding:25px;
     border-radius:var(--radius);
 
@@ -540,7 +549,7 @@ tr:hover{
 
     border-radius:10px;
 
-    background: var(--panel);
+    background: var(--panel-bg);
 
     color:var(--text);
 
@@ -552,7 +561,7 @@ tr:hover{
 
     background: var(--primary);
 
-    color:var(--text);
+    color:var(--button-text);
 
     border:none;
 

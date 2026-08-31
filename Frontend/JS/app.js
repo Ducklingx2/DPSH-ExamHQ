@@ -20,3 +20,11 @@ const savedTheme =
     localStorage.getItem("theme") || "ocean";
 
 applyTheme(savedTheme);
+
+const savedBorder = localStorage.getItem("borderStyle");
+
+if (savedBorder) {
+
+    applyBorder(savedBorder);
+
+}
