@@ -1,7 +1,3 @@
-// =========================
-// Dashboard UI
-// =========================
-
 function updateDashboardStats() {
 
     const total = tasks.length;
@@ -21,10 +17,6 @@ function updateDashboardStats() {
     document.getElementById("overdueTasks").textContent = overdue;
 
 }
-
-// =========================
-// Teacher List
-// =========================
 
 function renderTeachers() {
 
@@ -68,10 +60,6 @@ function renderTeachers() {
 
 }
 
-// =========================
-// Task Table
-// =========================
-
 function renderTasks() {
 
     const table = document.getElementById("taskTable");
@@ -105,10 +93,6 @@ function renderTasks() {
     });
 
 }
-
-// =========================
-// Refresh Everything
-// =========================
 
 function refreshUI() {
 

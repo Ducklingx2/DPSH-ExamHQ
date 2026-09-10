@@ -121,15 +121,12 @@ function applyBorder(style) {
 
     if (!border) return;
 
-    for (const property in border) {
+    Object.entries(border).forEach(([property, value]) => {
 
-        document.documentElement.style.setProperty(
-            property,
-            border[property]
-        );
+        document.documentElement.style.setProperty(property, value);
 
-    }
+    });
 
-    localStorage.setItem("border", style);
+    localStorage.setItem("borderStyle", style);
 
 }
