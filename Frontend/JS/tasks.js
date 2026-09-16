@@ -200,34 +200,32 @@ function renderTasks() {
 
 }
 
-async function submitTask(taskId) {
+function submitTask(taskId) {
 
     const task = tasks.find(t => t.id === taskId);
 
     if (!task) return;
 
-    const fileInput = document.getElementById(`file-${taskId}`);
+    const fileInput =
+        document.getElementById(`file-${taskId}`);
 
     if (fileInput.files.length === 0) {
+
         alert("Please choose a file.");
+
         return;
+
     }
 
-    await fetch("/api/tasks/complete", {
+    task.fileName = fileInput.files[0].name;
 
-        method: "POST",
+    task.status = "Completed";
 
-        headers: {
-            "Content-Type": "application/json"
-        },
+    task.completedAt = new Date().toISOString();
 
-        body: JSON.stringify({
-            id: taskId
-        })
+    saveData();
 
-    });
-
-    await loadTasks();
+    renderTasks();
 
     updateDashboardStats();
 

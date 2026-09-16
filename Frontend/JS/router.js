@@ -1,5 +1,3 @@
-let currentPage= ""
-
 const pages = {
     dashboard: Dashboard,
     teachers: Teachers,
@@ -25,20 +23,6 @@ function loadPage(page) {
         .querySelector(`[data-page="${page}"]`)
         .classList.add("active");
 
-    if (page === "dashboard") {
-        refreshUI();
-    }
-
-}
-
-function refreshUI() {
-
-    if (currentPage === "dashboard") {
-        updateDashboardStats();
-    }
-
-    if (currentPage === "tasks") {
-        loadTasks();
-    }
+    refreshUI();
 
 }

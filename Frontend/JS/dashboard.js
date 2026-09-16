@@ -108,14 +108,10 @@ async function Dashboard(main) {
  
 function updateDashboardStats() {
 
-    const total = document.getElementById("totalTasks");
+    const total = tasks.length;
 
-    if (total) {
-        total.textContent = tasks.length;
-    }
-   
     const completed = tasks.filter(
-        t => t.status === "🟢 Completed"
+        t => t.status === "Completed"
     ).length;
 
     const overdue = tasks.filter(
@@ -126,23 +122,13 @@ function updateDashboardStats() {
         t => getTaskStatus(t) === "🟡 Pending"
     ).length;
 
-    const totalEl = document.getElementById("totalTasks");
+    document.getElementById("totalTasks").textContent = total;
 
-    const completedEl = document.getElementById("completedTasks");
+    document.getElementById("completedTasks").textContent = completed;
 
-    const pendingEl = document.getElementById("pendingTasks");
+    document.getElementById("pendingTasks").textContent = pending;
 
-    const overdueEl = document.getElementById("overdueTasks");
-
-if (!totalEl) return;
-
-    totalEl.textContent = total;
-
-    completedEl.textContent = completed;
-
-    pendingEl.textContent = pending;
-
-    overdueEl.textContent = overdue;
+    document.getElementById("overdueTasks").textContent = overdue;
 
 }
 

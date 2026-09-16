@@ -1,0 +1,124 @@
+* [33ma8713ca[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelopment[m[33m, [m[1;31morigin/development[m[33m)[m Add Rust backend foundation
+* [33m7a9209a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Added personalization in settings.js
+* [33m58e0dbd[m Added personaliztion in setting.js
+* [33mc7558ea[m DPSH-ExamHQ v1.0.1
+* [33m4c49811[m Added teachers and teacherhandler
+* [33m870eb92[m Syncing frontend: Tasks
+* [33m78459f4[m renamed frontent
+* [33m7a0e6d6[m Models to models
+* [33mc3a123f[m Frontend to frontend
+* [33m185bc10[m Handlers to handlers
+* [33m6b609f1[m SQL installed
+*   [33ma8bc0ff[m[33m ([m[1;33mtag: [m[1;33mv0.1.0[m[33m)[m Resolve merge conflicts
+[32m|[m[33m\[m  
+[32m|[m * [33m4bfd429[m Update main.go
+[32m|[m * [33md16d8e5[m Update taskhandler.go
+[32m|[m * [33m4c82a0b[m Update main.go
+[32m|[m * [33mf6231a5[m Wrote go.mod
+[32m|[m * [33m7adae7c[m Wrote task.go code
+[32m|[m * [33m21ec165[m Create task.go
+[32m|[m * [33mbbe4bc3[m Wrote taskhandler code
+[32m|[m * [33m47bcb7a[m Create taskhandler.go
+* [33m|[m [33m25770e2[m Backend Phase 1 complete
+[33m|[m[33m/[m  
+* [33mb3789dc[m Made backend
+* [33mbc3fac1[m Create main.go
+* [33m241fefb[m Create go.mod
+* [33md383546[m Inserted into frontend
+* [33m33ee9f7[m Inserted into frontend
+* [33m0a3acb9[m Inserted into frontend
+* [33mb4b4c84[m Inserted into frontend
+* [33m0e70ea9[m Rename JS/reports.js to Frontend/JS/reports.js
+* [33m8037679[m Inserted into frontend
+* [33mdb5915b[m Inserted into frontend
+* [33me8c2cc7[m Inserted into frontend
+* [33meac4bd8[m In
+* [33mef65288[m Inserted into frontend
+* [33mab12177[m Inserted into frontend
+* [33mfe3d8f2[m Respelled typo
+* [33mab4d4ff[m Inserted in frontend
+* [33m1a42626[m Created Frontend directory
+* [33m7879501[m Added status section the task table head
+* [33ma387cac[m Added rounded table corners
+* [33m1ade834[m Added file upload feature and refined submission
+* [33ma737a9d[m Added Submit button styling
+* [33m61490f8[m Added Submit button
+* [33m1f0e01d[m Update tasks.js
+* [33mbfc422c[m Added small circles for status
+* [33me1d7d7e[m Removed useless template.
+* [33mfea611f[m Removed useless template.
+* [33m22bc376[m Removed titles
+* [33mefd7e68[m Fixed task templates.
+* [33m031fb13[m Replaced task input with task templates.
+* [33m484b379[m Added Task Templates
+* [33m612861f[m Removed department referenes
+* [33m34167a9[m Deleted departments.js
+* [33m4a88ffc[m Removed departments
+* [33m22a7775[m Removed departments and login.
+* [33m62c00f6[m Removed status feature.
+* [33mcc22006[m Removed department feature.
+* [33m196593d[m Removed all topbar btn.
+* [33m5db9b0b[m Removed all topbar buttons.
+* [33m3383c65[m Removed 🔔 btn.
+* [33m26565ad[m Added saveData()
+* [33ma5bb2fd[m Added saveData()
+* [33m2ebe3b3[m Added loadData() before page load
+* [33m9cc4d07[m Adding Storage.
+* [33m95f0fcc[m Edited names.
+* [33m60edd92[m Added departments page.
+* [33mb611356[m Create settings.js
+* [33ma5bd62c[m Create departments.js
+* [33maf1ea14[m Create analytics.js
+* [33m53c87c5[m Create reports.js
+* [33mda6dfb8[m Added some more files into code as placeholders for now.
+* [33m856c27c[m Removed non existent reports.js file
+* [33m500c75c[m Deleted 2 non existent files and took out non existent css folder.
+* [33m737e9e9[m Corrected definition of JS folder.
+* [33m4f594b8[m Updated tasks.js
+* [33m301750f[m Updated teachers.js
+* [33mb9022cf[m Created utils.js code
+* [33m70013ac[m Deleted const teachers = [];
+* [33m38f7c7d[m Created data.js code
+* [33ma45172e[m Updated style.css to style Tasks
+* [33m58b1494[m Created tasks.js code
+* [33m6992f68[m Deleted stats from index.html
+* [33mface2dc[m Updated style.css to style dashboard
+* [33mf386741[m Edited welcome message
+* [33m1dcdadb[m Created dashboard.js code
+* [33m618524e[m Deleted refreshUI()
+* [33m0fd8937[m Changed router.js to do refreshUI() instead of app.js
+* [33md0cb2c7[m Updated ui.js
+* [33me0bd618[m Created ui.js code.
+* [33m27b0300[m CSS defined.
+* [33mef1d9e6[m Created index.html basic code
+* [33mb0c2894[m Tried to make customized teacher names. ATT 1
+* [33mf3a7a4d[m Update app.js
+* [33m81777b9[m Update router.js
+* [33mb6a152d[m Update teachers.js
+* [33mce4929e[m Delete utils.js
+* [33m02cd050[m Delete ui.js
+* [33m80df650[m Create utils.js
+* [33m1be0f41[m Create ui.js
+* [33mf2bdfc4[m Create teachers.js
+* [33m1df3d26[m Delete teachers.js
+* [33m78adcc7[m Update dashboard.js
+* [33mb7f8b5a[m Update router.js
+* [33m936f5cf[m Update app.js
+* [33m45849d2[m Create tasks.js
+* [33ma55c9bd[m Delete tasks.js
+* [33m93dea0f[m Create dashboard.js
+* [33mdaab1b4[m Create data.js
+* [33m1200e0d[m Delete reports.js
+* [33m849b7b0[m Delete data.js
+* [33m022f0ef[m Delete app.js
+* [33mfce7dc1[m Create app.js
+* [33m0523714[m Create router.js
+* [33md2faeab[m Create utils.js
+* [33ma36e5c2[m Create reports.js
+* [33m05bb537[m Create teachers.js
+* [33m59752ee[m Create tasks.js
+* [33md6e0200[m Create ui.js
+* [33me07a965[m Create data.js
+* [33mfa1cff7[m Create app.js
+* [33m55fc710[m Create style.css
+* [33m0d4b11b[m Create index.html
