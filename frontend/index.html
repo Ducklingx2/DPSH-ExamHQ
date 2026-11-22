@@ -1,1 +1,326 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#101a2e"
+    >
+
+    <meta
+        name="description"
+        content="ExamHQ examination department management."
+    >
+
+    <title>ExamHQ | Examination Management</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- AUTHENTICATION -->
+
+    <section id="auth-screen" class="auth-screen">
+
+        <div class="auth-decoration auth-decoration-one"></div>
+        <div class="auth-decoration auth-decoration-two"></div>
+
+        <div class="auth-card">
+
+            <div class="brand">
+                <div class="brand-mark">E</div>
+
+                <div>
+                    <h1>ExamHQ</h1>
+                    <p>DPS Hinjawadi</p>
+                </div>
+            </div>
+
+            <div class="auth-heading">
+                <span class="eyebrow">
+                    EXAMINATION DEPARTMENT
+                </span>
+
+                <h2 id="auth-heading">
+                    Welcome back.
+                </h2>
+
+                <p id="auth-description">
+                    Sign in to access your workspace.
+                </p>
+            </div>
+
+            <form id="auth-form">
+
+                <div
+                    id="full-name-field"
+                    class="field"
+                    hidden
+                >
+                    <label for="full-name">
+                        Full name
+                    </label>
+
+                    <input
+                        id="full-name"
+                        type="text"
+                        placeholder="Your full name"
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="email">
+                        Email address
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Your password"
+                        minlength="6"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button
+                    id="auth-submit"
+                    class="primary-button full-width"
+                    type="submit"
+                >
+                    Sign in
+                </button>
+
+                <button
+                    id="forgot-password"
+                    class="text-button forgot-button"
+                    type="button"
+                >
+                    Forgot password?
+                </button>
+
+            </form>
+
+            <form
+                id="password-reset-form"
+                hidden
+            >
+                <div class="field">
+                    <label for="new-password">
+                        New password
+                    </label>
+
+                    <input
+                        id="new-password"
+                        type="password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button
+                    class="primary-button full-width"
+                    type="submit"
+                >
+                    Update password
+                </button>
+            </form>
+
+            <div
+                id="auth-message"
+                class="message"
+                role="status"
+            ></div>
+
+            <div class="auth-switch">
+                <span id="auth-switch-text">
+                    Don't have an account?
+                </span>
+
+                <button
+                    id="auth-mode-button"
+                    class="text-button"
+                    type="button"
+                >
+                    Create one
+                </button>
+            </div>
+
+        </div>
+
+        <p class="auth-footer">
+            EXAMHQ · EXAMINATION MANAGEMENT SYSTEM
+        </p>
+
+    </section>
+
+
+    <!-- APPLICATION -->
+
+    <section
+        id="app-screen"
+        class="app-shell"
+        hidden
+    >
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <div class="brand-mark">E</div>
+
+                <div>
+                    <h2>ExamHQ</h2>
+                    <span>DPS Hinjawadi</span>
+                </div>
+            </div>
+
+            <div class="nav-label">
+                WORKSPACE
+            </div>
+
+            <nav class="navigation">
+
+                <button
+                    class="nav-button active"
+                    data-page="dashboard"
+                >
+                    <span class="nav-icon">◫</span>
+                    <span>Dashboard</span>
+                </button>
+
+                <button
+                    class="nav-button"
+                    data-page="tasks"
+                >
+                    <span class="nav-icon">▤</span>
+                    <span>Tasks</span>
+                </button>
+
+                <button
+                    class="nav-button admin-only"
+                    data-page="teachers"
+                    hidden
+                >
+                    <span class="nav-icon">♧</span>
+                    <span>Teachers</span>
+                </button>
+
+                <button
+                    class="nav-button admin-only"
+                    data-page="reports"
+                    hidden
+                >
+                    <span class="nav-icon">▥</span>
+                    <span>Reports</span>
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="profile-card">
+
+                    <div
+                        class="avatar"
+                        id="user-avatar"
+                    >
+                        U
+                    </div>
+
+                    <div class="profile-details">
+                        <strong id="user-name">User</strong>
+                        <span id="user-role">Teacher</span>
+                    </div>
+
+                </div>
+
+                <button
+                    id="logout-button"
+                    class="logout-button"
+                >
+                    <span>↗</span>
+                    Sign out
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <main class="main-area">
+
+            <header class="topbar">
+
+                <div>
+                    <span class="eyebrow">
+                        EXAMHQ WORKSPACE
+                    </span>
+
+                    <h1 id="page-title">
+                        Dashboard
+                    </h1>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="live-indicator"></span>
+                    <span>Workspace connected</span>
+                </div>
+
+            </header>
+
+            <section
+                id="main-content"
+                class="page-content"
+            >
+                <div class="loading-state">
+                    <div class="loader"></div>
+                    <p>Loading ExamHQ...</p>
+                </div>
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script
+        type="module"
+        src="/JS/app.js"
+    ></script>
+
+</body>
+</html>
+
