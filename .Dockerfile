@@ -33,7 +33,7 @@ COPY --from=builder \
 COPY Frontend /app/frontend
 
 ENV HOST=0.0.0.0
-ENV FRONTEND_DIR=/app/Frontend
+ENV FRONTEND_DIR=/app/frontend
 ENV RUST_LOG=info
 
 EXPOSE 10000
