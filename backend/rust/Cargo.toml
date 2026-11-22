@@ -6,57 +6,46 @@ edition = "2021"
 
 [dependencies]
 axum = "0.8"
-
-[dependencies.tokio]
-    version = "1"
-    features = ["macros", "rt-multi-thread", "net"]
-
-serde = {
-    version = "1",
-    features = ["derive"]
-}
-
 serde_json = "1"
-
-sqlx = {
-    version = "0.8",
-    default-features = false,
-    features = [
-        "runtime-tokio-rustls",
-        "postgres",
-        "uuid",
-        "chrono",
-        "macros"
-    ]
-}
-
-reqwest = {
-    version = "0.12",
-    default-features = false,
-    features = ["json", "rustls-tls"]
-}
-
-chrono = {
-    version = "0.4",
-    features = ["serde"]
-}
-
-uuid = {
-    version = "1",
-    features = ["serde", "v4"]
-}
-
 dotenvy = "0.15"
-
-tower-http = {
-    version = "0.6",
-    features = ["fs", "trace"]
-}
-
 tracing = "0.1"
 
-tracing-subscriber = {
-    version = "0.3",
-    features = ["env-filter"]
-}
+[dependencies.tokio]
+version = "1"
+features = ["macros", "rt-multi-thread", "net"]
 
+[dependencies.serde]
+version = "1"
+features = ["derive"]
+
+[dependencies.sqlx]
+version = "0.8"
+default-features = false
+features = [
+    "runtime-tokio-rustls",
+    "postgres",
+    "uuid",
+    "chrono",
+    "macros"
+]
+
+[dependencies.reqwest]
+version = "0.12"
+default-features = false
+features = ["json", "rustls-tls"]
+
+[dependencies.chrono]
+version = "0.4"
+features = ["serde"]
+
+[dependencies.uuid]
+version = "1"
+features = ["serde", "v4"]
+
+[dependencies.tower-http]
+version = "0.6"
+features = ["fs", "trace"]
+
+[dependencies.tracing-subscriber]
+version = "0.3"
+features = ["env-filter"]
