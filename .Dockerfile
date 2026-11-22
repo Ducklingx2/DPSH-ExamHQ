@@ -30,7 +30,7 @@ COPY --from=builder \
     /app/target/release/examhq \
     /usr/local/bin/examhq
 
-COPY Frontend /app/Frontend
+COPY Frontend /app/frontend
 
 ENV HOST=0.0.0.0
 ENV FRONTEND_DIR=/app/Frontend
