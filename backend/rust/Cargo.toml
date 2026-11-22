@@ -7,10 +7,9 @@ edition = "2021"
 [dependencies]
 axum = "0.8"
 
-tokio = {
+[dependencies.tokio]
     version = "1",
     features = ["macros", "rt-multi-thread", "net"]
-}
 
 serde = {
     version = "1",
