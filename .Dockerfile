@@ -27,7 +27,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder \
-    /app/target/release/examhq \
+    /app/backend/rust/target/release/examhq \
     /usr/local/bin/examhq
 
 COPY frontend /app/frontend
