@@ -638,14 +638,31 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .unwrap_or_else(|_| "Frontend".to_string());
 
     // Connect to Supabase PostgreSQL.
-    let db = PgPoolOptions::new()
-        .max_connections(10)
-        .connect(&database_url)
-        .await?;
+    tracing::info!("Connecting to Supabase PostgreSQL...");
 
-    sqlx::query("SELECT 1")
-        .execute(&db)
-        .await?;
+let db = PgPoolOptions::new()
+    .max_connections(5)
+    .acquire_timeout(Duration::from_secs(15))
+    .connect(&database_url)
+    .await
+    .map_err(|error| {
+        tracing::error!("PostgreSQL connection failed: {error}");
+        error
+    })?;
+
+tracing::info!("Connected to Supabase PostgreSQL.");
+
+tracing::info!("Testing database query...");
+
+sqlx::query("SELECT 1")
+    .execute(&db)
+    .await
+    .map_err(|error| {
+        tracing::error!("Database test query failed: {error}");
+        error
+    })?;
+
+tracing::info!("Database test successful.");
 
     // Supabase Auth HTTP client.
     let http = reqwest::Client::builder()
