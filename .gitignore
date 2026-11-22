@@ -1,93 +1,35 @@
-# ==============================
-# Environment / Secrets
-# ==============================
 
+# Secrets
 .env
 .env.*
 !.env.example
 
-# ==============================
-# Python
-# ==============================
+# Rust build output
+/target
+/backend/rust/target
 
-__pycache__/
-*.py[cod]
-*$py.class
-
-.venv/
-venv/
-env/
-
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-*.egg-info/
-dist/
-build/
-
-# ==============================
-# Jupyter
-# ==============================
-
-.ipynb_checkpoints/
-
-# ==============================
-# Node / JavaScript / JSX
-# ==============================
-
+# Node
 node_modules/
 npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
 
-# Build output
-dist/
-build/
-.next/
-out/
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
 
-# ==============================
-# Rust
-# ==============================
-
-target/
-
-# ==============================
-# IDE / Editors
-# ==============================
-
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-
+# IDE
 .idea/
+.vscode/
 
-# ==============================
-# OS
-# ==============================
-
+# Operating system
 .DS_Store
 Thumbs.db
 
-# ==============================
 # Logs
-# ==============================
-
 *.log
 
-# ==============================
-# Database / Local data
-# ==============================
-
+# Local databases
 *.sqlite
 *.sqlite3
 *.db
-
-# ==============================
-# Generated reports
-# ==============================
-
-*.pdf
-*.xlsx
-*.csv
